@@ -15,6 +15,9 @@ inputs:
   exclude:
     description: 'Commit messages matching the regexp listed here will be removed from the output'
     required: false
+  repo_dir:
+    description: 'The repository path.'
+    required: false
   debug:
     description: 'Enables debug mode'
     default: 'false'
@@ -31,4 +34,5 @@ runs:
     - ${{ inputs.current_tag }}
     - ${{ inputs.previous_tag }}
     - ${{ inputs.exclude }}
+    - ${{ inputs.repo_dir }}
     - ${{ inputs.debug }} 
